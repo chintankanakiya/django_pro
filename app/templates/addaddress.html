@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+    
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <div class="tr-single-box">
+            <div class="tr-single-header">
+                <h4><i class="ti-write"></i>Add Address</h4>
+            </div>
+            <div class="tr-single-body">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <label>Name</label>
+                        <input type="text" class="form-control" name="name">
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Address></label>
+                        <input type="text" class="form-control" name="address">
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Phone</label>
+                        <input type="text" class="form-control" name="pno">
+                    </div>
+                    <div class="col-sm-6">
+                        <label>Country</label>
+                        <input type="text" class="form-control" name="country">
+                    </div>
+                    <div class="col-sm-6">
+                        <label>State</label>
+                        <input type="text" class="form-control" name="state">
+                    </div>
+                    <div class="col-sm-6">
+                        <label>City</label>
+                        <input type="text" class="form-control" name="city">
+                    </div>
+                    
+                    <div class="col-sm-6">
+                        <label>Pincode</label>
+                        <input type="text" class="form-control" name="pincode">
+                    </div>
+                    <input type="submit" class="form-control">
+                    
+                </div>	
+            </div>
+        </center>
+    </form>
+ 
+{% endblock body %}    

@@ -1,0 +1,112 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+
+    <!-- ======================= End Navigation ===================== -->
+		
+		<!-- ======================= Start Page Title ===================== -->
+		<div class="page-title image-title" style="background-image:url(assets/img/banner.jpg);">
+			<div class="container">
+				<div class="page-title-wrap">
+				<h2>Add To cart</h2>
+				<p><a href="#" class="theme-cl">Home</a> | <span>Add To cart</span></p>
+				</div>
+			</div>
+		</div>
+		<!-- ======================= End Page Title ===================== -->
+		
+		<!-- ======================= Start Checkout ===================== -->
+		<section class="cart gray-bg">
+			<div class="container">
+				<div class="row">
+					
+					<div class="col-md-8 col-sm-8">
+						<div class="tg-cartproductdetail table-responsive">
+							<table class="table" cellspacing="0">
+								<thead>
+									<tr>
+										<th class="product-name">Name</th>
+										<th class="product-quantity">Quantity</th>
+										<th class="product-price">Price</th>
+										<th class="product-remove">&nbsp;</th>
+									</tr>
+								</thead>
+								<tbody>
+								
+									<tr class="cart_item">
+									
+									{% for i in Cart %}
+										
+									
+										
+										<td>
+											<div class="tg-tourname">
+												<figure>
+													<a href="#"><img src="{{i.Prodect.p_image.url}}" class="img-responsive" alt=""></a>
+												</figure>
+												<div class="tg-populartourcontent">
+													<div class="tg-populartourtitle">
+														<h3>
+															<a href="#">{{i.Prodect.p_name}}</a>											</h3>
+													</div>
+													<span>1 x <span class="Price-amount amount"><span class="Price-currencySymbol">$</span>{{i.Prodect.p_price}}</span>										</span>
+												</div>
+											</div>
+										</td>
+										
+										<td class="product-quantity">
+											<a class="product-quantity-up" href="{% url 'pluse' i.id %}">+</a>
+											<input type="text" value="{{i.quantity}}">
+											<a class="product-quantity-down" href="{% url 'min' i.id %}">-</a>
+												
+											</div>
+										</td>
+										
+										<td>
+											<span class="Price-amount amount"><span class="Price-currencySymbol">$</span>{{i.Prodect.p_price}}</span>
+										</td>
+										
+										<td class="product-remove">
+											<a href="#" class="remove"><i class="icon-trash-can"></i></a>
+										</td>
+										
+									</tr>
+									{% endfor %}
+									
+								</tbody>
+							</table>
+						</div>
+					</div>
+					
+					<!-- Sidebar -->
+					<div class="col-md-4 col-sm-4">
+						<div class="tr-single-box">
+							<div class="tr-single-header">
+								<h4>Total<span class="fl-right">{{subtotal}}</span></h4>
+							</div>
+							
+							<div class="tr-single-body">
+								<div class="booking-price-detail side-list no-border">
+									<ul>
+										
+										{% for i in Cart %}
+										<li>{{i.Prodect.p_name}}<strong class="pull-right">{{i.subtotal}}</strong></li>
+										{% endfor %}
+									</ul>
+									<a href="{% url 'checkout' %}" class="btn btn-success full-width">Proceed now</a>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+		<!-- ======================= End Checkout ===================== -->
+			
+		
+{% endblock body %}
+		

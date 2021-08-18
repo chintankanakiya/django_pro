@@ -1,0 +1,42 @@
+"""jwellary URL Configuration
+
+The `urlpatterns` list routes URLs to views. For more information please see:
+    https://docs.djangoproject.com/en/3.1/topics/http/urls/
+Examples:
+Function views
+    1. Add an import:  from my_app import views
+    2. Add a URL to urlpatterns:  path('', views.home, name='home')
+Class-based views
+    1. Add an import:  from other_app.views import Home
+    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
+Including another URLconf
+    1. Import the include() function: from django.urls import include, path
+    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
+"""
+from django.contrib import admin
+from django.urls import path
+from app import views
+
+from django.conf import settings
+from django.conf.urls.static import static
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('',views.index,name='index'),
+    path('base/',views.base),
+    path('signup/',views.signup,name='signup'),
+    path('login/',views.Login,name='login'),
+    path('logout/',views.Logout,name='logout'),
+    path('product/',views.product,name='product'),
+    path('detail/',views.detail,name='detail'),
+    path('addtocart/<int:id>/',views.addtocart,name='addtocart'),
+    path('showcart/',views.showcart,name='showcart'),
+    path('pluse/<int:id>/',views.pluse,name='pluse'),
+    path('min/<int:id>/',views.min,name='min'),
+    path('addaddress/',views.addaddress,name='addaddress'),
+    path('checkout/',views.checkout,name='checkout'),
+    path('paybutton/',views.paybutton,name='paybutton'),
+    path('payment/',views.payment,name='payment'),
+    path('response/',views.response,name='response'),
+    path('order/',views.order,name='order'),
+]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

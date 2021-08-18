@@ -1,0 +1,312 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+
+<!-- ======================= End Navigation ===================== -->
+
+<!-- ======================= Start Banner ===================== -->
+<section class="page-title-banner" style="background-image:url({{prod.p_image.url}});">
+	<div class="container">
+		<div class="row">
+			<div class="tr-list-detail">
+				<div class="tr-list-thumb">
+					<img src="{{prod.p_image.url}}" class="img-responsive img-circle" alt="" />
+				</div>
+				<div class="tr-list-info">
+					<h4>Product</h4>
+					<p>Detail</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- ======================= End Banner ===================== -->
+
+<!-- ======================= Start Detail Header ===================== -->
+<section class="profile-header-nav padd-0 bb-1">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-8 col-sm-8">
+				<div class="tab" role="tabpanel">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#Overview" aria-controls="home" role="tab"
+								data-toggle="tab"><i class="ti-user"></i>Overview</a></li>
+						<li role="presentation"><a href="#Features" aria-controls="profile" role="tab"
+								data-toggle="tab"><i class="ti-settings"></i>Features</a></li>
+						<li role="presentation"><a href="#Review" aria-controls="messages" role="tab"
+								data-toggle="tab"><i class="ti-thumb-up"></i>Review</a></li>
+						<li role="presentation"><a href="#Photos" aria-controls="messages" role="tab"
+								data-toggle="tab"><i class="ti-gallery"></i>Photos</a></li>
+					</ul>
+					<!-- Tab panes -->
+				</div>
+			</div>
+
+			<div class="col-md-4 col-sm-4">
+				<div class="fl-right">
+					<button type="button" class="btn theme-btn"><span class="fa fa-paper-plane mrg-r-10"></span>Send
+						Message</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- ======================= End Detail Header ===================== -->
+
+<!-- ======================= Start Detail ===================== -->
+<section class="tr-single-detail gray-bg">
+	<div class="container">
+		<div class="row">
+
+			<div class="col-md-8 col-sm-12">
+				<div class="tab-content tabs">
+
+					<div role="tabpanel" class="tab-pane fade in active" id="Overview">
+
+						<!-- Overview -->
+						<div class="row">
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="fa fa-star-o"></i>Overview</h4>
+								</div>
+								<div class="tr-single-body">
+									<div class="row">
+
+										<div class="col-md-6 col-sm-6">
+											<div class="list-thumb-box">
+												<img src="{{prod.p_image.url}}" class="img-responsive" alt="" />
+												<a href="#" class="list-like left"><i class="ti-heart"></i></a>
+												<h5>4.8/<sub class="theme-cl">5</sub></h5>
+											</div>
+										</div>
+
+										<div class="col-md-6 col-sm-6">
+											<div class="list-overview-detail">
+												<h5>{{prod.p_name}}</h5>
+												<ul class="extra-service">
+													<li>
+														<div class="icon-box-icon-block">
+															<a href="#">
+																<div class="icon-box-round">
+																	<i class=" ti-location-pin"></i>
+																</div>
+																<div class="icon-box-text">
+																	Istanbul, Turkey, Newyork, 052 458
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li>
+														<div class="icon-box-icon-block">
+															<a href="#">
+																<div class="icon-box-round">
+																	<i class="ti-email"></i>
+																</div>
+																<div class="icon-box-text">
+																	destination@gmail.com
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li>
+														<div class="icon-box-icon-block">
+															<a href="#">
+																<div class="icon-box-round">
+																	<i class="ti-headphone-alt"></i>
+																</div>
+																<div class="icon-box-text">
+																	125 458 75849
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li>
+														<div class="icon-box-icon-block">
+															<a href="#">
+																<div class="icon-box-round">
+																	<i class="ti-share"></i>
+																</div>
+																<div class="icon-box-text">
+																	110 Share
+																</div>
+															</a>
+														</div>
+													</li>
+
+													<li>
+														<div class="icon-box-icon-block">
+															<a href="#">
+																<div class="icon-box-round">
+																	<i class="ti-comment-alt"></i>
+																</div>
+																<div class="icon-box-text">
+																	22 comments
+																</div>
+															</a>
+														</div>
+													</li>
+
+												</ul>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Overview -->
+						<div class="row">
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="fa fa-star-o"></i>Ratting</h4>
+								</div>
+								<div class="tr-single-body">
+									<div class="row">
+										<div class="col-sm-4">
+											<div id="review_summary">
+												<strong>8.5</strong>
+												<em class="cl-success">Superb</em>
+												<small>Based on 4 reviews</small>
+											</div>
+										</div>
+										<div class="col-sm-8">
+											<div class="row">
+												<div class="col-lg-10 col-9">
+													<div class="progress">
+														<div class="progress-bar progress-bar-success"
+															role="progressbar" style="width: 98%" aria-valuenow="98"
+															aria-valuemin="0" aria-valuemax="100"></div>
+													</div>
+												</div>
+												<div class="col-lg-2 col-3"><small><strong>5 stars</strong></small>
+												</div>
+											</div>
+											<!-- /row -->
+											<div class="row">
+												<div class="col-lg-10 col-9">
+													<div class="progress">
+														<div class="progress-bar progress-bar-warning"
+															role="progressbar" style="width: 90%" aria-valuenow="90"
+															aria-valuemin="0" aria-valuemax="100"></div>
+													</div>
+												</div>
+												<div class="col-lg-2 col-3"><small><strong>4 stars</strong></small>
+												</div>
+											</div>
+											<!-- /row -->
+											<div class="row">
+												<div class="col-lg-10 col-9">
+													<div class="progress">
+														<div class="progress-bar progress-bar-primary"
+															role="progressbar" style="width: 60%" aria-valuenow="60"
+															aria-valuemin="0" aria-valuemax="100"></div>
+													</div>
+												</div>
+												<div class="col-lg-2 col-3"><small><strong>3 stars</strong></small>
+												</div>
+											</div>
+											<!-- /row -->
+											<div class="row">
+												<div class="col-lg-10 col-9">
+													<div class="progress">
+														<div class="progress-bar progress-bar-danger" role="progressbar"
+															style="width: 20%" aria-valuenow="20" aria-valuemin="0"
+															aria-valuemax="100"></div>
+													</div>
+												</div>
+												<div class="col-lg-2 col-3"><small><strong>2 stars</strong></small>
+												</div>
+											</div>
+											<!-- /row -->
+											<div class="row">
+												<div class="col-lg-10 col-9">
+													<div class="progress">
+														<div class="progress-bar" role="progressbar" style="width: 10%"
+															aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+														</div>
+													</div>
+												</div>
+												<div class="col-lg-2 col-3"><small><strong>1 stars</strong></small>
+												</div>
+											</div>
+											<!-- /row -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Description -->
+						<div class="row">
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="ti-files"></i>Description</h4>
+								</div>
+								<div class="tr-single-body">
+									{{prod.p_discription}}
+								</div>
+							</div>
+						</div>
+
+						<!-- Amenities -->
+						<div class="row">
+							<div class="tr-single-box">
+								<div class="tr-single-header">
+									<h4><i class="ti-crown"></i>Amenities</h4>
+								</div>
+								<div class="top">
+									<div class="sku">
+										<div class="product_details">
+											<div class="title">
+												<h2>Product Details</h2>
+											</div>
+											<div class="details">
+												<div class="top">
+													<div class="sku"><label>Style No</label><span
+															class="values sku_value">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{prod.Styleno}}</span></div>
+
+
+
+													<div class="bottom_thickness"><label>Bottom Thickness</label><span
+															class="values">:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{prod.BottomThickness}}</span></div>
+
+													<div class="top_thickness"><label>Top Thickness</label><span
+															class="values">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{prod.TopThickness}}</span></div>
+
+													<div class="top_height"><label>Top Height</label><span
+															class="values">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{prod.TopHeight}}</span></div>
+
+													<div class="total_weight last"><label>Total Weight</label><span
+															class="values" id="total_weight">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp{{prod.TotalWeight}}</span></div>
+												</div>
+											</div>
+											<p class="notes"
+												style="clear: both; padding-top: 15px; font-size: 15px; font-style: italic;">
+												Note: Our products are handcrafted and personalised for your delight,
+												hence a weight variance is expected.</p>
+										</div>
+										<label>{{prod.p_discription}}</label>
+
+									</div>
+
+								</div>
+							</div>
+						</div>
+
+						<!-- Location -->
+					</div>	
+				</div>	<!-- ============ Review =================== -->
+			</div>		
+		</div>
+	</div>
+</section>
+{% endblock body %}
+<!-- ======================= End Detail ===================== -->
